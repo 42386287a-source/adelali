@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الرائع</title>
+
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- ربط ملف JavaScript -->
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">موقعي</div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- قسم المقدمة -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>مرحباً بك في موقعي! 🎉</h1>
+                <p>هذا أول موقع لي باستخدام Django</p>
+                <button id="cta-button" class="btn">ابدأ الرحلة</button>
+            </div>
+        </section>
+
+        <!-- قسم من نحن -->
+        <section id="about" class="about">
+            <h2>من نحن</h2>
+            <p>نحن فريق متخصص في تطوير الويب باستخدام Django</p>
+        </section>
+
+        <!-- قسم اتصل بنا -->
+        <section id="contact" class="contact">
+            <h2>اتصل بنا</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="اسمك" required>
+                <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+                <textarea id="message" placeholder="رسالتك" rows="5" required></textarea>
+                <button type="submit" class="btn">إرسال</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 موقعي. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
